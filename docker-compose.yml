@@ -42,7 +42,7 @@ services:
       - ./todo-fe/src
     container_name: todo-fe
     ports:
-      - "3000:3000"
+      - "3000:80"
     depends_on:
       - todo-be
     networks:
