@@ -16,8 +16,9 @@ services:
     build:
       context: todo-be
       dockerfile: Dockerfile
+    container_name: todo-be
     volumes:
-      - ./todo-be:/app
+      - ./todo-be:/src
     ports:
       - "8081:8081"
     environment:
@@ -39,6 +40,7 @@ services:
       context: todo-fe
     volumes:
       - ./todo-fe/src
+    container_name: todo-fe
     ports:
       - "3000:3000"
     depends_on:
